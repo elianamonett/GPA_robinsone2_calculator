@@ -1,0 +1,16 @@
+<!-- strings allow the developer to avoid hardcoding -->
+
+<resources>
+    <string name="app_name">GPA_robinsone2_calculator</string>
+    <string name="white">#FFFFFF</string>
+    <string name="course1">Course 1:</string>
+    <string name="gpa">GPA</string>
+    <string name="course3">Course 3:</string>
+    <string name="course2">Course 2:</string>
+    <string name="course4">Course 4:</string>
+    <string name="course5">Course 5:</string>
+    <string name="compute_gpa">Compute GPA</string>
+    <string name="gpa_calculator">GPA Calculator</string>
+    <string name="input_entergrade">Enter grade for at least one course:</string>
+    <string name="change_clearform">Clear Form</string>
+</resources>

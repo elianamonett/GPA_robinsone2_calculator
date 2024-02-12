@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- scrollview is nested inside the linear layout because it does not work when used -->
+<!-- as root element of XML -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+       <!-- following this line is constraints for images and textview which allow for a seamless UI-->
+       <!-- the constraints allow the user to input data in an intuitive way, calculate GPA, and clear the form-->
+    <ImageView
+        android:id="@+id/graduationcap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@+id/graduationcap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/appheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/gpa_calculator"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graduationcap" />
+
+    <!-- Course 1 -->
+    <TextView
+        android:id="@+id/labelCourse1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/course1"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCourse1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appheader" />
+
+    <EditText
+        android:id="@+id/editTextCourse1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/gpa"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelCourse1"
+        app:layout_constraintTop_toTopOf="@id/labelCourse1"
+        android:autofillHints="grade" />
+
+    <!-- Course 2 -->
+    <TextView
+        android:id="@+id/labelCourse2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/course2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCourse2"
+        app:layout_constraintStart_toStartOf="@+id/labelCourse1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCourse1" />
+
+    <EditText
+        android:id="@+id/editTextCourse2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/gpa"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelCourse2"
+        app:layout_constraintTop_toTopOf="@id/labelCourse2"
+        android:autofillHints="grade" />
+
+    <!-- Course 3 -->
+    <TextView
+        android:id="@+id/labelCourse3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/course3"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCourse3"
+        app:layout_constraintStart_toStartOf="@+id/labelCourse1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCourse2" />
+
+    <EditText
+        android:id="@+id/editTextCourse3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/gpa"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelCourse3"
+        app:layout_constraintTop_toTopOf="@id/labelCourse3"
+        android:autofillHints="grade" />
+
+    <!-- Course 4 -->
+    <TextView
+        android:id="@+id/labelCourse4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/course4"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCourse4"
+        app:layout_constraintStart_toStartOf="@+id/labelCourse1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCourse3" />
+
+    <EditText
+        android:id="@+id/editTextCourse4"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/gpa"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelCourse4"
+        app:layout_constraintTop_toTopOf="@id/labelCourse4"
+        android:autofillHints="grade" />
+
+    <!-- Course 5 -->
+    <TextView
+        android:id="@+id/labelCourse5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/course5"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCourse5"
+        app:layout_constraintStart_toStartOf="@+id/labelCourse1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCourse4" />
+
+    <EditText
+        android:id="@+id/editTextCourse5"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/gpa"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/black"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelCourse5"
+        app:layout_constraintTop_toTopOf="@id/labelCourse5"
+        android:autofillHints="grade" />
+
+    <Button
+        android:id="@+id/btn_compute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCourse5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Compute GPA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelCourse5" />
+
+    <TextView
+        android:id="@+id/gpa_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_compute"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="GPA Result: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_compute"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/btn_compute"
+        app:layout_constraintTop_toBottomOf="@+id/btn_compute" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout></LinearLayout>
+    </ScrollView>
+</LinearLayout>
